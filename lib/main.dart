@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
-
+import 'package:intern_login/screen.dart';
 void main() {
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
       home: MyApp(),
+      routes: {
+        'shop': (context)=> screen(),
+      },
     ),
   );
 }
@@ -155,7 +158,9 @@ class MyApp extends StatelessWidget {
 
                               width: double.infinity,
                               child: ElevatedButton(
-                                onPressed: (){},
+                                onPressed: (){
+                                  Navigator.pushNamed(context,'shop');
+                                },
                                 child: Text(
                                     'Login',
                                     ),
@@ -185,3 +190,4 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
